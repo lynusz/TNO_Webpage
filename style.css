@@ -1,0 +1,35 @@
+body {
+background:#262626;
+text-align: center;
+}
+.main {
+	width:800px;
+	height:3000px;
+	background: #ffffff;
+	margin:15px auto;
+	padding: 10px;
+	
+	
+}
+.header {
+	width:750px;
+	height:80px;
+	background: #ffffff;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 20px;
+	border: solid 2px #262626
+}
+
+
+
+.tno_table {
+	
+}
+
+h1 {
+	text-align: center;
+	font-family: "Times New Roman";
+	font: 24pt;
+	color: #262626
+}
