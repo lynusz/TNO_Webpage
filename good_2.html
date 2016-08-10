@@ -12,15 +12,45 @@
                 <p><a href = "homepage2.html">Home</a></p>
             </div><div>
                 <br><br>
-                <form action="action_page.php" >
-                    <select name="Status">
-                        <option value="Unchecked" >Unchecked</option>
-                        <option value="Confirmed">Confirmed</option>
-                        <option value="Rejected">Rejected</option>
-                        <option value="Under Inspection">Under Inspection</option>
-                    </select>
-                    <input type="submit">
-                        </form>
+                <form>
+	<select name = "status">
+		<option>Accepted</option>
+		<option>Rejected</option>
+		<option>Uninspected</option>
+		<option>Look Again</option>
+		<option>Planet 9!!!</option>
+
+	</select>
+	<br>
+	<button type = "submit" name = "submit" value = "submit">Submit</button>
+</form>
+
+<p> The status is:</p>
+
+<?php
+	if (isset($_GET['submit'])){
+		$status = $_GET['status'];
+		switch($status){
+			case "Accepted":
+				echo " Accepted!";
+			break;
+			case "Rejected":
+				echo " Rejected :(";
+			break;
+			case "Uninspected":
+				echo " Uninspected";
+			break;
+			case "Look Again":
+				echo " Look Again";
+			break;
+			case "Planet 9!!!":
+				echo " Get prepped for the cameras";
+			break;
+
+
+		}
+	}
+?>
             </div>
             <div class = "tab" align = "center">
                 
@@ -41,49 +71,104 @@
                 <td>ml_score</td>
                 <td>Object ID</td>
             </tr>        <tr align = "center">
-                <td>2014/12/24 04:04:15</td>
-                <td>2:35:16.79</td>
-                <td>-14:18:09.9</td>
-                <td>390941</td>
-                <td>90.0</td>
-                <td>r</td>
-                <td>22</td>
-                <td>23.87</td>
-                <td>0.78</td>
-                <td>25189745</td>
-            </tr>        <tr align = "center">
-                <td>2014/12/16 04:41:53</td>
-                <td>2:35:43.58</td>
-                <td>-14:21:48.9</td>
-                <td>388201</td>
-                <td>90.0</td>
-                <td>i</td>
-                <td>26</td>
-                <td>23.28</td>
-                <td>0.858</td>
-                <td>25564805</td>
-            </tr>        <tr align = "center">
-                <td>2014/12/12 04:48:56</td>
-                <td>2:35:58.88</td>
-                <td>-14:23:17.2</td>
-                <td>386740</td>
-                <td>90.0</td>
-                <td>i</td>
-                <td>23</td>
-                <td>23.42</td>
-                <td>0.742</td>
-                <td>24509371</td>
-            </tr>        <tr align = "center">
-                <td>2014/12/12 04:46:58</td>
-                <td>2:35:58.89</td>
-                <td>-14:23:17.2</td>
-                <td>386739</td>
+                <td>2014/11/12 08:21:45</td>
+                <td>3:46:05.61</td>
+                <td>-31:14:33.6</td>
+                <td>376759</td>
                 <td>90.0</td>
                 <td>z</td>
-                <td>23</td>
-                <td>23.19</td>
-                <td>0.645</td>
-                <td>24541494</td>
+                <td>18</td>
+                <td>22.56</td>
+                <td>0.857</td>
+                <td>99605809</td>
+            </tr>        <tr align = "center">
+                <td>2014/11/18 08:02:25</td>
+                <td>3:45:27.76</td>
+                <td>-31:15:50.0</td>
+                <td>379086</td>
+                <td>90.0</td>
+                <td>g</td>
+                <td>18</td>
+                <td>24.05</td>
+                <td>0.663</td>
+                <td>100910629</td>
+            </tr>        <tr align = "center">
+                <td>2015/1/8 03:39:54</td>
+                <td>3:40:49.43</td>
+                <td>-30:54:19.8</td>
+                <td>395553</td>
+                <td>90.0</td>
+                <td>z</td>
+                <td>52</td>
+                <td>22.77</td>
+                <td>0.853</td>
+                <td>102058795</td>
+            </tr>        <tr align = "center">
+                <td>2015/1/10 04:05:01</td>
+                <td>3:40:42.26</td>
+                <td>-30:52:23.3</td>
+                <td>396350</td>
+                <td>90.0</td>
+                <td>i</td>
+                <td>4</td>
+                <td>22.64</td>
+                <td>0.867</td>
+                <td>102228954</td>
+            </tr>        <tr align = "center">
+                <td>2015/2/1 02:37:18</td>
+                <td>3:39:54.21</td>
+                <td>-30:27:30.6</td>
+                <td>405167</td>
+                <td>90.0</td>
+                <td>z</td>
+                <td>11</td>
+                <td>22.86</td>
+                <td>0.83</td>
+                <td>106678239</td>
+            </tr>        <tr align = "center">
+                <td>2015/11/15 08:16:09</td>
+                <td>3:52:56.38</td>
+                <td>-30:26:04.6</td>
+                <td>493287</td>
+                <td>90.0</td>
+                <td>i</td>
+                <td>9</td>
+                <td>22.64</td>
+                <td>0.901</td>
+                <td>108667701</td>
+            </tr>        <tr align = "center">
+                <td>2015/11/16 07:54:08</td>
+                <td>3:52:50.19</td>
+                <td>-30:26:18.1</td>
+                <td>493663</td>
+                <td>90.0</td>
+                <td>r</td>
+                <td>9</td>
+                <td>22.66</td>
+                <td>0.963</td>
+                <td>108614887</td>
+            </tr>        <tr align = "center">
+                <td>2015/11/16 07:56:05</td>
+                <td>3:52:50.21</td>
+                <td>-30:26:18.2</td>
+                <td>493664</td>
+                <td>90.0</td>
+                <td>g</td>
+                <td>9</td>
+                <td>22.96</td>
+                <td>0.98</td>
+                <td>108624575</td>
+            </tr>        <tr align = "center">
+                <td>2015/11/29 07:07:55</td>
+                <td>3:51:28.26</td>
+                <td>-30:27:16.9</td>
+                <td>497384</td>
+                <td>90.0</td>
+                <td>z</td>
+                <td>60</td>
+                <td>22.51</td>
+                <td>0.91</td>
+                <td>108906945</td>
             </tr>
         </table>
             </div>		<div class = "img">
@@ -95,22 +180,50 @@
                 </tr>
                     <th>Observations</th> <th>Comparison images ordered by decreasing t_eff</th> </tr> 
 
-    <tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.754</u></td><td><u> t_eff = 0.576</u></td><td><u> t_eff = 0.391</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_ee696a47-4a62-4d49-a31e-a85f9eb326e2/DESJ023516.8-141809.9_r_20141223Circ.png" ><img src= "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_ee696a47-4a62-4d49-a31e-a85f9eb326e2/DESJ023516.8-141809.9_r_20141223Circ.png" align='center' alt = "No Reference Image Available"
-                width ="200" height="200" align="center" border = "1"></img> </a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_ee696a47-4a62-4d49-a31e-a85f9eb326e2/DESJ023516.8-141809.9_r_20151210Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_ee696a47-4a62-4d49-a31e-a85f9eb326e2/DESJ023516.8-141809.9_r_20151210Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_ee696a47-4a62-4d49-a31e-a85f9eb326e2/DESJ023516.8-141809.9_r_20141102Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_ee696a47-4a62-4d49-a31e-a85f9eb326e2/DESJ023516.8-141809.9_r_20141102Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td></tr>     <tr align = "center"><td>Expnum = 390941, ccd = 22</td><td>Expnum = 501131, ccd = 48</td><td>Expnum = 374603, ccd = 25</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2014/12/24 04:04:15</td><td> Date: 2015/12/11 04:33:14</td><td> Date: 2014/11/03 07:28:33</td></tr> 
-<tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.669</u></td><td><u> t_eff = 0.876</u></td><td><u> t_eff = 0.514</u></td><td><u> t_eff = 0.428</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_ee696a47-4a62-4d49-a31e-a85f9eb326e2/DESJ023558.9-142317.2_i_20141215Circ.png" ><img src= "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_ee696a47-4a62-4d49-a31e-a85f9eb326e2/DESJ023558.9-142317.2_i_20141215Circ.png" align='center' alt = "No Reference Image Available"
-                width ="200" height="200" align="center" border = "1"></img> </a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_ee696a47-4a62-4d49-a31e-a85f9eb326e2/DESJ023558.9-142317.2_i_20141211Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_ee696a47-4a62-4d49-a31e-a85f9eb326e2/DESJ023558.9-142317.2_i_20141211Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_ee696a47-4a62-4d49-a31e-a85f9eb326e2/DESJ023558.9-142317.2_i_20151130Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_ee696a47-4a62-4d49-a31e-a85f9eb326e2/DESJ023558.9-142317.2_i_20151130Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_ee696a47-4a62-4d49-a31e-a85f9eb326e2/DESJ023558.9-142317.2_i_20141102Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_ee696a47-4a62-4d49-a31e-a85f9eb326e2/DESJ023558.9-142317.2_i_20141102Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td></tr>     <tr align = "center"><td>Expnum = 388201, ccd = 26</td><td>Expnum = 386740, ccd = 23</td><td>Expnum = 498292, ccd = 54</td><td>Expnum = 374602, ccd = 4</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2014/12/16 04:41:53</td><td> Date: 2014/12/12 04:48:57</td><td> Date: 2015/12/01 05:08:26</td><td> Date: 2014/11/03 07:26:35</td></tr> 
-<tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.876</u></td><td><u> t_eff = 0.669</u></td><td><u> t_eff = 0.514</u></td><td><u> t_eff = 0.428</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_ee696a47-4a62-4d49-a31e-a85f9eb326e2/DESJ023543.6-142148.9_i_20141211Circ.png" ><img src= "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_ee696a47-4a62-4d49-a31e-a85f9eb326e2/DESJ023543.6-142148.9_i_20141211Circ.png" align='center' alt = "No Reference Image Available"
-                width ="200" height="200" align="center" border = "1"></img> </a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_ee696a47-4a62-4d49-a31e-a85f9eb326e2/DESJ023543.6-142148.9_i_20141215Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_ee696a47-4a62-4d49-a31e-a85f9eb326e2/DESJ023543.6-142148.9_i_20141215Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_ee696a47-4a62-4d49-a31e-a85f9eb326e2/DESJ023543.6-142148.9_i_20151130Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_ee696a47-4a62-4d49-a31e-a85f9eb326e2/DESJ023543.6-142148.9_i_20151130Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_ee696a47-4a62-4d49-a31e-a85f9eb326e2/DESJ023543.6-142148.9_i_20141102Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_ee696a47-4a62-4d49-a31e-a85f9eb326e2/DESJ023543.6-142148.9_i_20141102Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td></tr>     <tr align = "center"><td>Expnum = 386740, ccd = 23</td><td>Expnum = 388201, ccd = 26</td><td>Expnum = 498292, ccd = 54</td><td>Expnum = 374602, ccd = 4</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2014/12/12 04:48:56</td><td> Date: 2014/12/16 04:41:53</td><td> Date: 2015/12/01 05:08:26</td><td> Date: 2014/11/03 07:26:35</td></tr> 
-<tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 1.717</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/" ><img src= "/Users/lynuszullo/pyOrbfit/" align='center' alt = "No Reference Image Available"
-                width ="200" height="200" align="center" border = "1"></img> </a> </td></tr>     <tr align = "center"><td>Expnum = 386739, ccd = 23</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2014/12/12 04:46:58</td></tr> 
+    <tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.863</u></td><td><u> t_eff = 1.023</u></td><td><u> t_eff = 0.852</u></td><td><u> t_eff = 0.565</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/PermFiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ034605.6-311433.6_z_20141111Circ.png" ><img src= "/Users/lynuszullo/pyOrbfit/PermFiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ034605.6-311433.6_z_20141111Circ.png" align='center' alt = "No Reference Image Available"
+                width ="200" height="200" align="center" border = "1"></img> </a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ034605.6-311433.6_z_20141117Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ034605.6-311433.6_z_20141117Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ034605.6-311433.6_z_20151128Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ034605.6-311433.6_z_20151128Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ034605.6-311433.6_z_20150108Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ034605.6-311433.6_z_20150108Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td></tr>     <tr align = "center"><td>Expnum = 376759, ccd = 18</td><td>Expnum = 379087, ccd = 25</td><td>Expnum = 497386, ccd = 58</td><td>Expnum = 396066, ccd = 48</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2014/11/12 08:21:45</td><td> Date: 2014/11/18 08:04:28</td><td> Date: 2015/11/29 07:11:07</td><td> Date: 2015/01/09 04:24:30</td></tr> 
+<tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.636</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/" ><img src= "/Users/lynuszullo/pyOrbfit/" align='center' alt = "No Reference Image Available"
+                width ="200" height="200" align="center" border = "1"></img> </a> </td></tr>     <tr align = "center"><td>Expnum = 379086, ccd = 18</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2014/11/18 08:02:25</td></tr> 
+<tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.889</u></td><td><u> t_eff = 0.863</u></td><td><u> t_eff = 0.565</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/PermFiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ034049.4-305419.8_z_20150107Circ.png" ><img src= "/Users/lynuszullo/pyOrbfit/PermFiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ034049.4-305419.8_z_20150107Circ.png" align='center' alt = "No Reference Image Available"
+                width ="200" height="200" align="center" border = "1"></img> </a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ034049.4-305419.8_z_20141111Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ034049.4-305419.8_z_20141111Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ034049.4-305419.8_z_20150108Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ034049.4-305419.8_z_20150108Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td></tr>     <tr align = "center"><td>Expnum = 395553, ccd = 52</td><td>Expnum = 376759, ccd = 4</td><td>Expnum = 396066, ccd = 32</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2015/1/8 03:39:54</td><td> Date: 2014/11/12 08:21:45</td><td> Date: 2015/01/09 04:24:30</td></tr> 
+<tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.724</u></td><td><u> t_eff = 0.788</u></td><td><u> t_eff = 0.728</u></td><td><u> t_eff = 0.655</u></td><td><u> t_eff = 0.0</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/PermFiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ034042.3-305223.3_i_20150109Circ.png" ><img src= "/Users/lynuszullo/pyOrbfit/PermFiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ034042.3-305223.3_i_20150109Circ.png" align='center' alt = "No Reference Image Available"
+                width ="200" height="200" align="center" border = "1"></img> </a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ034042.3-305223.3_i_20141117Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ034042.3-305223.3_i_20141117Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ034042.3-305223.3_i_20150120Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ034042.3-305223.3_i_20150120Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ034042.3-305223.3_i_20151016Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ034042.3-305223.3_i_20151016Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ034042.3-305223.3_i_20160115Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ034042.3-305223.3_i_20160115Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td></tr>     <tr align = "center"><td>Expnum = 396350, ccd = 4</td><td>Expnum = 379085, ccd = 32</td><td>Expnum = 401210, ccd = 52</td><td>Expnum = 485011, ccd = 23</td><td>Expnum = 511785, ccd = 7</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2015/1/10 04:05:01</td><td> Date: 2014/11/18 08:00:26</td><td> Date: 2015/01/21 03:44:08</td><td> Date: 2015/10/17 08:08:05</td><td> Date: 2016/01/16 04:00:51</td></tr> 
+<tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.868</u></td><td><u> t_eff = 1.295</u></td><td><u> t_eff = 0.889</u></td><td><u> t_eff = 0.506</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/PermFiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ033954.2-302730.6_z_20150131Circ.png" ><img src= "/Users/lynuszullo/pyOrbfit/PermFiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ033954.2-302730.6_z_20150131Circ.png" align='center' alt = "No Reference Image Available"
+                width ="200" height="200" align="center" border = "1"></img> </a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ033954.2-302730.6_z_20140120Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ033954.2-302730.6_z_20140120Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ033954.2-302730.6_z_20150107Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ033954.2-302730.6_z_20150107Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ033954.2-302730.6_z_20151120Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ033954.2-302730.6_z_20151120Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td></tr>     <tr align = "center"><td>Expnum = 405167, ccd = 11</td><td>Expnum = 276397, ccd = 55</td><td>Expnum = 395553, ccd = 34</td><td>Expnum = 495443, ccd = 62</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2015/2/1 02:37:18</td><td> Date: 2014/01/21 02:40:55</td><td> Date: 2015/01/08 03:39:53</td><td> Date: 2015/11/21 06:04:11</td></tr> 
+<tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.799</u></td><td><u> t_eff = 1.302</u></td><td><u> t_eff = 0.852</u></td><td><u> t_eff = 0.61</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/PermFiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035256.4-302604.6_i_20151114Circ.png" ><img src= "/Users/lynuszullo/pyOrbfit/PermFiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035256.4-302604.6_i_20151114Circ.png" align='center' alt = "No Reference Image Available"
+                width ="200" height="200" align="center" border = "1"></img> </a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035256.4-302604.6_i_20150125Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035256.4-302604.6_i_20150125Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035256.4-302604.6_i_20150129Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035256.4-302604.6_i_20150129Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035256.4-302604.6_i_20150111Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035256.4-302604.6_i_20150111Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td></tr>     <tr align = "center"><td>Expnum = 493287, ccd = 9</td><td>Expnum = 403070, ccd = 53</td><td>Expnum = 404488, ccd = 32</td><td>Expnum = 397160, ccd = 24</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2015/11/15 08:16:09</td><td> Date: 2015/01/26 03:37:13</td><td> Date: 2015/01/30 02:47:13</td><td> Date: 2015/01/12 04:21:20</td></tr> 
+<tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.462</u></td><td><u> t_eff = 1.1</u></td><td><u> t_eff = 0.854</u></td><td><u> t_eff = 0.655</u></td><td><u> t_eff = 0.286</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/PermFiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035250.2-302618.1_r_20151115Circ.png" ><img src= "/Users/lynuszullo/pyOrbfit/PermFiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035250.2-302618.1_r_20151115Circ.png" align='center' alt = "No Reference Image Available"
+                width ="200" height="200" align="center" border = "1"></img> </a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035250.2-302618.1_r_20150215Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035250.2-302618.1_r_20150215Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035250.2-302618.1_r_20150209Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035250.2-302618.1_r_20150209Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035250.2-302618.1_r_20150210Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035250.2-302618.1_r_20150210Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035250.2-302618.1_r_20150213Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035250.2-302618.1_r_20150213Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td></tr>     <tr align = "center"><td>Expnum = 493663, ccd = 9</td><td>Expnum = 410499, ccd = 32</td><td>Expnum = 408334, ccd = 24</td><td>Expnum = 408707, ccd = 53</td><td>Expnum = 409723, ccd = 32</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2015/11/16 07:54:08</td><td> Date: 2015/02/16 01:30:35</td><td> Date: 2015/02/10 02:15:13</td><td> Date: 2015/02/11 02:37:43</td><td> Date: 2015/02/14 00:51:11</td></tr> 
+<tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.365</u></td><td><u> t_eff = 0.901</u></td><td><u> t_eff = 0.806</u></td><td><u> t_eff = 0.456</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/PermFiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035250.2-302618.2_g_20151115Circ.png" ><img src= "/Users/lynuszullo/pyOrbfit/PermFiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035250.2-302618.2_g_20151115Circ.png" align='center' alt = "No Reference Image Available"
+                width ="200" height="200" align="center" border = "1"></img> </a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035250.2-302618.2_g_20150215Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035250.2-302618.2_g_20150215Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035250.2-302618.2_g_20150209Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035250.2-302618.2_g_20150209Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035250.2-302618.2_g_20150210Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035250.2-302618.2_g_20150210Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td></tr>     <tr align = "center"><td>Expnum = 493664, ccd = 9</td><td>Expnum = 410497, ccd = 32</td><td>Expnum = 408335, ccd = 53</td><td>Expnum = 408706, ccd = 24</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2015/11/16 07:56:05</td><td> Date: 2015/02/16 01:26:35</td><td> Date: 2015/02/10 02:17:11</td><td> Date: 2015/02/11 02:35:43</td></tr> 
+<tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.831</u></td><td><u> t_eff = 1.023</u></td><td><u> t_eff = 0.849</u></td><td><u> t_eff = 0.606</u></td><td><u> t_eff = 0.528</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/PermFiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035128.3-302716.9_z_20151128Circ.png" ><img src= "/Users/lynuszullo/pyOrbfit/PermFiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035128.3-302716.9_z_20151128Circ.png" align='center' alt = "No Reference Image Available"
+                width ="200" height="200" align="center" border = "1"></img> </a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035128.3-302716.9_z_20141117Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035128.3-302716.9_z_20141117Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035128.3-302716.9_z_20150131Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035128.3-302716.9_z_20150131Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035128.3-302716.9_z_20150111Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035128.3-302716.9_z_20150111Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035128.3-302716.9_z_20141112Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_e916148f-3234-45ea-aef5-e0151a2ccf3c/DESJ035128.3-302716.9_z_20141112Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td></tr>     <tr align = "center"><td>Expnum = 497384, ccd = 60</td><td>Expnum = 379087, ccd = 3</td><td>Expnum = 405169, ccd = 8</td><td>Expnum = 397166, ccd = 52</td><td>Expnum = 377168, ccd = 23</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2015/11/29 07:07:55</td><td> Date: 2014/11/18 08:04:28</td><td> Date: 2015/02/01 02:40:37</td><td> Date: 2015/01/12 04:33:42</td><td> Date: 2014/11/13 08:28:17</td></tr> 
 
         		
 		
@@ -142,14 +255,28 @@
     
     </table>
 
-    </div><div>
-    <form action="gold_27.html" method="post">
-        <p>Comment:</p>
-        <textarea type="text" name="name"> </textarea> <br>
-    
-        <input type="submit">
-    </form>
     </div>
+<?php
+
+if($_POST){
+    $name = $_POST['name'];
+    $content = $_POST['commentContent'];
+    $file = 'distant_s13_y2.php';
+    if (($handle = fopen($file, "a")) !== false) { 
+        fwrite($handle,"<b>" . $name . "</b>:<br/>" . $content . "<br/>");
+        fclose($handle);
+    }
+}
+
+?>
+
+
+<form action = "" method = "POST">
+    Comments: <textarea rows = "10" cols = "30" name = "commentContent"></textarea><br/>
+    Name: <input type = "text" name = "name"><br/>
+    <input type = "submit" value = "Post!"><br/>
+</form>
+
             <div class = "tab" align = "center">
                 
             <table width = "700" border="1" align="center">
@@ -168,135 +295,35 @@
                 <td>a</td>
                 <td>b</td>
             </tr>        <tr align = "center">
-                <td>2014/9/15 07:50:54</td>
-                <td>2:42:52.41</td>
-                <td>-13:59:25.4</td>
-                <td>359284</td>
-                <td>z</td>
-                <td>49</td>
-                <td>47.31</td>
-                <td>33.0</td>
-                <td>21.95</td>
-            </tr>        <tr align = "center">
-                <td>2014/10/14 08:47:21</td>
-                <td>2:40:53.73</td>
-                <td>-14:17:03.9</td>
-                <td>367659</td>
-                <td>z</td>
-                <td>30</td>
-                <td>49.7</td>
-                <td>18.26</td>
-                <td>10.83</td>
-            </tr>        <tr align = "center">
-                <td>2014/10/31 06:49:07</td>
-                <td>2:39:26.07</td>
-                <td>-14:23:51.1</td>
-                <td>373323</td>
-                <td>r</td>
-                <td>56</td>
-                <td>50.39</td>
-                <td>10.65</td>
-                <td>5.94</td>
-            </tr>        <tr align = "center">
-                <td>2014/11/3 07:26:35</td>
-                <td>2:39:09.85</td>
-                <td>-14:24:41.2</td>
-                <td>374602</td>
+                <td>2015/1/21 03:44:09</td>
+                <td>3:40:11.10</td>
+                <td>-30:40:42.7</td>
+                <td>401210</td>
                 <td>i</td>
-                <td>7</td>
-                <td>50.48</td>
-                <td>9.44</td>
-                <td>5.21</td>
+                <td>40</td>
+                <td>115.53</td>
+                <td>0.08</td>
+                <td>0.06</td>
             </tr>        <tr align = "center">
-                <td>2014/12/15 04:44:16</td>
-                <td>2:35:47.29</td>
-                <td>-14:22:12.3</td>
-                <td>387818</td>
+                <td>2015/1/26 03:27:11</td>
+                <td>3:40:01.59</td>
+                <td>-30:34:51.9</td>
+                <td>403065</td>
                 <td>g</td>
-                <td>4</td>
-                <td>51.74</td>
-                <td>0.13</td>
-                <td>0.09</td>
+                <td>40</td>
+                <td>121.67</td>
+                <td>0.08</td>
+                <td>0.06</td>
             </tr>        <tr align = "center">
-                <td>2014/12/20 04:16:03</td>
-                <td>2:35:29.55</td>
-                <td>-14:20:06.6</td>
-                <td>389511</td>
-                <td>g</td>
-                <td>23</td>
-                <td>52.11</td>
-                <td>0.16</td>
-                <td>0.11</td>
-            </tr>        <tr align = "center">
-                <td>2014/12/23 02:37:35</td>
-                <td>2:35:20.05</td>
-                <td>-14:18:42.2</td>
-                <td>390516</td>
-                <td>g</td>
-                <td>25</td>
-                <td>52.26</td>
-                <td>0.13</td>
-                <td>0.13</td>
-            </tr>        <tr align = "center">
-                <td>2014/12/31 03:32:58</td>
-                <td>2:34:57.89</td>
-                <td>-14:14:13.7</td>
-                <td>393528</td>
-                <td>z</td>
-                <td>38</td>
-                <td>52.7</td>
-                <td>0.83</td>
-                <td>0.41</td>
-            </tr>        <tr align = "center">
-                <td>2015/11/22 02:23:41</td>
-                <td>2:43:07.84</td>
-                <td>-13:21:39.1</td>
-                <td>495734</td>
-                <td>z</td>
-                <td>55</td>
-                <td>90.48</td>
-                <td>233.87</td>
-                <td>62.48</td>
-            </tr>        <tr align = "center">
-                <td>2015/11/30 05:44:45</td>
-                <td>2:42:27.57</td>
-                <td>-13:21:09.0</td>
-                <td>497805</td>
-                <td>i</td>
-                <td>54</td>
-                <td>90.81</td>
-                <td>227.71</td>
-                <td>64.48</td>
-            </tr>        <tr align = "center">
-                <td>2015/12/5 05:24:12</td>
-                <td>2:42:04.38</td>
-                <td>-13:20:20.4</td>
-                <td>499471</td>
+                <td>2015/1/26 03:29:07</td>
+                <td>3:40:01.59</td>
+                <td>-30:34:51.8</td>
+                <td>403066</td>
                 <td>r</td>
-                <td>54</td>
-                <td>90.9</td>
-                <td>224.2</td>
-                <td>65.98</td>
-            </tr>        <tr align = "center">
-                <td>2015/12/5 05:26:11</td>
-                <td>2:42:04.38</td>
-                <td>-13:20:20.4</td>
-                <td>499472</td>
-                <td>g</td>
-                <td>54</td>
-                <td>90.9</td>
-                <td>224.2</td>
-                <td>65.98</td>
-            </tr>        <tr align = "center">
-                <td>2015/12/21 01:58:46</td>
-                <td>2:41:00.97</td>
-                <td>-13:15:14.2</td>
-                <td>504524</td>
-                <td>z</td>
-                <td>28</td>
-                <td>90.49</td>
-                <td>215.21</td>
-                <td>72.55</td>
+                <td>40</td>
+                <td>121.67</td>
+                <td>0.08</td>
+                <td>0.06</td>
             </tr>
         </table>
             </div>		<div class = "img">
@@ -308,72 +335,21 @@
                 </tr>
                     <th>Expected Observations</th> <th>Comparison images ordered by decreasing t_eff</th> </tr> 
 
-    <tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.749</u></td><td><u> t_eff = 0.969</u></td><td><u> t_eff = 0.712</u></td><td><u> t_eff = 0.477</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024252.4-135925.4_z_20140914Circ.png" ><img src= "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024252.4-135925.4_z_20140914Circ.png" align='center' alt = "No Reference Image Available"
-                width ="200" height="200" align="center" border = "1"></img> </a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024252.4-135925.4_z_20141211Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024252.4-135925.4_z_20141211Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024252.4-135925.4_z_20141130Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024252.4-135925.4_z_20141130Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024252.4-135925.4_z_20151220Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024252.4-135925.4_z_20151220Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td></tr>     <tr align = "center"><td>Expnum = 359284, ccd = 49</td><td>Expnum = 386747, ccd = 51</td><td>Expnum = 383207, ccd = 27</td><td>Expnum = 504524, ccd = 59</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2014/9/15 07:50:54</td><td> Date: 2014/12/12 05:02:56</td><td> Date: 2014/12/01 05:03:58</td><td> Date: 2015/12/21 01:58:45</td></tr> 
-<tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.367</u></td><td><u> t_eff = 0.749</u></td><td><u> t_eff = 0.335</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024053.7-141703.9_z_20141013Circ.png" ><img src= "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024053.7-141703.9_z_20141013Circ.png" align='center' alt = "No Reference Image Available"
-                width ="200" height="200" align="center" border = "1"></img> </a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024053.7-141703.9_z_20140914Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024053.7-141703.9_z_20140914Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024053.7-141703.9_z_20151120Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024053.7-141703.9_z_20151120Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td></tr>     <tr align = "center"><td>Expnum = 367659, ccd = 30</td><td>Expnum = 359284, ccd = 57</td><td>Expnum = 495430, ccd = 10</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2014/10/14 08:47:21</td><td> Date: 2014/09/15 07:50:53</td><td> Date: 2015/11/21 05:38:38</td></tr> 
-<tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.537</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/" ><img src= "/Users/lynuszullo/pyOrbfit/" align='center' alt = "No Reference Image Available"
-                width ="200" height="200" align="center" border = "1"></img> </a> </td></tr>     <tr align = "center"><td>Expnum = 373323, ccd = 56</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2014/10/31 06:49:07</td></tr> 
-<tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.428</u></td><td><u> t_eff = 1.063</u></td><td><u> t_eff = 0.669</u></td><td><u> t_eff = 0.343</u></td><td><u> t_eff = 0.174</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023926.1-142351.1_i_20141102Circ.png" ><img src= "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023926.1-142351.1_i_20141102Circ.png" align='center' alt = "No Reference Image Available"
-                width ="200" height="200" align="center" border = "1"></img> </a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023926.1-142351.1_i_20151216Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023926.1-142351.1_i_20151216Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023926.1-142351.1_i_20141215Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023926.1-142351.1_i_20141215Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023926.1-142351.1_i_20141213Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023926.1-142351.1_i_20141213Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023926.1-142351.1_i_20141124Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023926.1-142351.1_i_20141124Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td></tr>     <tr align = "center"><td>Expnum = 374602, ccd = 7</td><td>Expnum = 502684, ccd = 14</td><td>Expnum = 388201, ccd = 29</td><td>Expnum = 387421, ccd = 56</td><td>Expnum = 381284, ccd = 56</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2014/11/3 07:26:35</td><td> Date: 2015/12/17 03:53:16</td><td> Date: 2014/12/16 04:41:53</td><td> Date: 2014/12/14 03:14:28</td><td> Date: 2014/11/25 05:59:21</td></tr> 
-<tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.627</u></td><td><u> t_eff = 0.641</u></td><td><u> t_eff = 0.555</u></td><td><u> t_eff = 0.463</u></td><td><u> t_eff = 0.278</u></td><td><u> t_eff = 0.172</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023547.3-142212.3_g_20141214Circ.png" ><img src= "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023547.3-142212.3_g_20141214Circ.png" align='center' alt = "No Reference Image Available"
-                width ="200" height="200" align="center" border = "1"></img> </a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023547.3-142212.3_g_20141219Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023547.3-142212.3_g_20141219Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023547.3-142212.3_g_20151210Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023547.3-142212.3_g_20151210Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023547.3-142212.3_g_20141222Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023547.3-142212.3_g_20141222Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023547.3-142212.3_g_20141213Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023547.3-142212.3_g_20141213Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023547.3-142212.3_g_20141027Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023547.3-142212.3_g_20141027Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td></tr>     <tr align = "center"><td>Expnum = 387818, ccd = 4</td><td>Expnum = 389511, ccd = 23</td><td>Expnum = 501132, ccd = 54</td><td>Expnum = 390516, ccd = 26</td><td>Expnum = 387422, ccd = 26</td><td>Expnum = 372195, ccd = 26</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2014/12/15 04:44:16</td><td> Date: 2014/12/20 04:16:02</td><td> Date: 2015/12/11 04:35:12</td><td> Date: 2014/12/23 02:37:35</td><td> Date: 2014/12/14 03:16:27</td><td> Date: 2014/10/28 07:01:53</td></tr> 
-<tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.641</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/" ><img src= "/Users/lynuszullo/pyOrbfit/" align='center' alt = "No Reference Image Available"
-                width ="200" height="200" align="center" border = "1"></img> </a> </td></tr>     <tr align = "center"><td>Expnum = 389511, ccd = 23</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2014/12/20 04:16:03</td></tr> 
-<tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.463</u></td><td><u> t_eff = 0.641</u></td><td><u> t_eff = 0.278</u></td><td><u> t_eff = 0.172</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023520.0-141842.2_g_20141222Circ.png" ><img src= "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023520.0-141842.2_g_20141222Circ.png" align='center' alt = "No Reference Image Available"
-                width ="200" height="200" align="center" border = "1"></img> </a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023520.0-141842.2_g_20141219Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023520.0-141842.2_g_20141219Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023520.0-141842.2_g_20141213Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023520.0-141842.2_g_20141213Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023520.0-141842.2_g_20141027Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023520.0-141842.2_g_20141027Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td></tr>     <tr align = "center"><td>Expnum = 390516, ccd = 25</td><td>Expnum = 389511, ccd = 22</td><td>Expnum = 387422, ccd = 25</td><td>Expnum = 372195, ccd = 25</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2014/12/23 02:37:35</td><td> Date: 2014/12/20 04:16:02</td><td> Date: 2014/12/14 03:16:27</td><td> Date: 2014/10/28 07:01:53</td></tr> 
-<tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.37</u></td><td><u> t_eff = 1.717</u></td><td><u> t_eff = 0.721</u></td><td><u> t_eff = 0.629</u></td><td><u> t_eff = 0.367</u></td><td><u> t_eff = 0.235</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023457.9-141413.7_z_20141230Circ.png" ><img src= "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023457.9-141413.7_z_20141230Circ.png" align='center' alt = "No Reference Image Available"
-                width ="200" height="200" align="center" border = "1"></img> </a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023457.9-141413.7_z_20141211Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023457.9-141413.7_z_20141211Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023457.9-141413.7_z_20151121Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023457.9-141413.7_z_20151121Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023457.9-141413.7_z_20151130Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023457.9-141413.7_z_20151130Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023457.9-141413.7_z_20141013Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023457.9-141413.7_z_20141013Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023457.9-141413.7_z_20151120Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ023457.9-141413.7_z_20151120Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td></tr>     <tr align = "center"><td>Expnum = 393528, ccd = 38</td><td>Expnum = 386739, ccd = 16</td><td>Expnum = 495747, ccd = 48</td><td>Expnum = 498305, ccd = 28</td><td>Expnum = 367659, ccd = 19</td><td>Expnum = 495429, ccd = 48</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2014/12/31 03:32:58</td><td> Date: 2014/12/12 04:46:58</td><td> Date: 2015/11/22 02:45:46</td><td> Date: 2015/12/01 05:36:23</td><td> Date: 2014/10/14 08:47:20</td><td> Date: 2015/11/21 05:36:40</td></tr> 
-<tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.549</u></td><td><u> t_eff = 0.969</u></td><td><u> t_eff = 0.749</u></td><td><u> t_eff = 0.712</u></td><td><u> t_eff = 0.477</u></td><td><u> t_eff = 0.276</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024307.8-132139.1_z_20151121Circ.png" ><img src= "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024307.8-132139.1_z_20151121Circ.png" align='center' alt = "No Reference Image Available"
-                width ="200" height="200" align="center" border = "1"></img> </a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024307.8-132139.1_z_20141211Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024307.8-132139.1_z_20141211Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024307.8-132139.1_z_20140914Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024307.8-132139.1_z_20140914Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024307.8-132139.1_z_20141130Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024307.8-132139.1_z_20141130Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024307.8-132139.1_z_20151220Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024307.8-132139.1_z_20151220Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024307.8-132139.1_z_20151120Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024307.8-132139.1_z_20151120Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td></tr>     <tr align = "center"><td>Expnum = 495734, ccd = 55</td><td>Expnum = 386747, ccd = 26</td><td>Expnum = 359284, ccd = 23</td><td>Expnum = 383207, ccd = 5</td><td>Expnum = 504524, ccd = 37</td><td>Expnum = 495433, ccd = 55</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2015/11/22 02:23:41</td><td> Date: 2014/12/12 05:02:56</td><td> Date: 2014/09/15 07:50:53</td><td> Date: 2014/12/01 05:03:58</td><td> Date: 2015/12/21 01:58:45</td><td> Date: 2015/11/21 05:44:40</td></tr> 
-<tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.683</u></td><td><u> t_eff = 0.75</u></td><td><u> t_eff = 0.399</u></td><td><u> t_eff = 0.343</u></td><td><u> t_eff = 0.174</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024227.6-132109.0_i_20151129Circ.png" ><img src= "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024227.6-132109.0_i_20151129Circ.png" align='center' alt = "No Reference Image Available"
-                width ="200" height="200" align="center" border = "1"></img> </a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024227.6-132109.0_i_20141030Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024227.6-132109.0_i_20141030Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024227.6-132109.0_i_20141127Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024227.6-132109.0_i_20141127Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024227.6-132109.0_i_20141213Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024227.6-132109.0_i_20141213Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024227.6-132109.0_i_20141124Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024227.6-132109.0_i_20141124Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td></tr>     <tr align = "center"><td>Expnum = 497805, ccd = 54</td><td>Expnum = 373324, ccd = 26</td><td>Expnum = 382304, ccd = 4</td><td>Expnum = 387421, ccd = 23</td><td>Expnum = 381284, ccd = 23</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2015/11/30 05:44:45</td><td> Date: 2014/10/31 06:51:06</td><td> Date: 2014/11/28 05:37:24</td><td> Date: 2014/12/14 03:14:28</td><td> Date: 2014/11/25 05:59:21</td></tr> 
-<tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.78</u></td><td><u> t_eff = 0.602</u></td><td><u> t_eff = 0.537</u></td><td><u> t_eff = 0.45</u></td><td><u> t_eff = 0.173</u></td><td><u> t_eff = 0.007</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024204.4-132020.4_r_20151204Circ.png" ><img src= "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024204.4-132020.4_r_20151204Circ.png" align='center' alt = "No Reference Image Available"
-                width ="200" height="200" align="center" border = "1"></img> </a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024204.4-132020.4_r_20141127Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024204.4-132020.4_r_20141127Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024204.4-132020.4_r_20141030Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024204.4-132020.4_r_20141030Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024204.4-132020.4_r_20141028Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024204.4-132020.4_r_20141028Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024204.4-132020.4_r_20151203Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024204.4-132020.4_r_20151203Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024204.4-132020.4_r_20141124Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024204.4-132020.4_r_20141124Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td></tr>     <tr align = "center"><td>Expnum = 499471, ccd = 54</td><td>Expnum = 382303, ccd = 4</td><td>Expnum = 373323, ccd = 22</td><td>Expnum = 372643, ccd = 25</td><td>Expnum = 499129, ccd = 54</td><td>Expnum = 381287, ccd = 4</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2015/12/5 05:24:12</td><td> Date: 2014/11/28 05:35:25</td><td> Date: 2014/10/31 06:49:07</td><td> Date: 2014/10/29 07:51:07</td><td> Date: 2015/12/04 05:25:16</td><td> Date: 2014/11/25 06:05:17</td></tr> 
-<tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.648</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/" ><img src= "/Users/lynuszullo/pyOrbfit/" align='center' alt = "No Reference Image Available"
-                width ="200" height="200" align="center" border = "1"></img> </a> </td></tr>     <tr align = "center"><td>Expnum = 499472, ccd = 54</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2015/12/5 05:26:11</td></tr> 
-<tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.477</u></td><td><u> t_eff = 0.969</u></td><td><u> t_eff = 0.549</u></td><td><u> t_eff = 0.385</u></td><td><u> t_eff = 0.276</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024101.0-131514.2_z_20151220Circ.png" ><img src= "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024101.0-131514.2_z_20151220Circ.png" align='center' alt = "No Reference Image Available"
-                width ="200" height="200" align="center" border = "1"></img> </a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024101.0-131514.2_z_20141211Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024101.0-131514.2_z_20141211Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024101.0-131514.2_z_20151121Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024101.0-131514.2_z_20151121Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024101.0-131514.2_z_20141230Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024101.0-131514.2_z_20141230Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024101.0-131514.2_z_20151120Circ.png"><img src="/Users/lynuszullo/pyOrbfit/NotTempImgs_temp_90c69f60-0233-4a2e-8311-1cf054b59585/DESJ024101.0-131514.2_z_20151120Circ.png" align='center' alt = "Example 1 pic"
-                width ="200" height="200" align="center" border = "1"></img></a> </td></tr>     <tr align = "center"><td>Expnum = 504524, ccd = 28</td><td>Expnum = 386747, ccd = 25</td><td>Expnum = 495734, ccd = 47</td><td>Expnum = 393529, ccd = 38</td><td>Expnum = 495433, ccd = 47</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2015/12/21 01:58:46</td><td> Date: 2014/12/12 05:02:56</td><td> Date: 2015/11/22 02:23:40</td><td> Date: 2014/12/31 03:34:57</td><td> Date: 2015/11/21 05:44:40</td></tr> 
+    <tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.728</u></td><td><u> t_eff = 1.313</u></td><td><u> t_eff = 1.208</u></td><td><u> t_eff = 0.48</u></td><td><u> t_eff = 0.0</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/PermFiles/NotTempImgs_temp_646d164e-5e00-4289-8d95-21b630178d0c/DESJ034001.6-303451.9_i_20150120Circ.png" ><img src= "/Users/lynuszullo/pyOrbfit/PermFiles/NotTempImgs_temp_646d164e-5e00-4289-8d95-21b630178d0c/DESJ034001.6-303451.9_i_20150120Circ.png" align='center' alt = "No Reference Image Available"
+                width ="200" height="200" align="center" border = "1"></img> </a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_646d164e-5e00-4289-8d95-21b630178d0c/DESJ034001.6-303451.9_i_20140121Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_646d164e-5e00-4289-8d95-21b630178d0c/DESJ034001.6-303451.9_i_20140121Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_646d164e-5e00-4289-8d95-21b630178d0c/DESJ034001.6-303451.9_i_20150125Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_646d164e-5e00-4289-8d95-21b630178d0c/DESJ034001.6-303451.9_i_20150125Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_646d164e-5e00-4289-8d95-21b630178d0c/DESJ034001.6-303451.9_i_20141117Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_646d164e-5e00-4289-8d95-21b630178d0c/DESJ034001.6-303451.9_i_20141117Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_646d164e-5e00-4289-8d95-21b630178d0c/DESJ034001.6-303451.9_i_20160115Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_646d164e-5e00-4289-8d95-21b630178d0c/DESJ034001.6-303451.9_i_20160115Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td></tr>     <tr align = "center"><td>Expnum = 401210, ccd = 40</td><td>Expnum = 276736, ccd = 59</td><td>Expnum = 403064, ccd = 60</td><td>Expnum = 379083, ccd = 31</td><td>Expnum = 511785, ccd = 3</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2015/1/21 03:44:09</td><td> Date: 2014/01/22 03:15:50</td><td> Date: 2015/01/26 03:25:13</td><td> Date: 2014/11/18 07:56:20</td><td> Date: 2016/01/16 04:00:51</td></tr> 
+<tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.504</u></td><td><u> t_eff = 0.917</u></td><td><u> t_eff = 0.909</u></td><td><u> t_eff = 0.467</u></td><td><u> t_eff = 0.0</u></td><td><u> t_eff = 0.0</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/PermFiles/NotTempImgs_temp_646d164e-5e00-4289-8d95-21b630178d0c/DESJ034001.6-303451.8_g_20150125Circ.png" ><img src= "/Users/lynuszullo/pyOrbfit/PermFiles/NotTempImgs_temp_646d164e-5e00-4289-8d95-21b630178d0c/DESJ034001.6-303451.8_g_20150125Circ.png" align='center' alt = "No Reference Image Available"
+                width ="200" height="200" align="center" border = "1"></img> </a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_646d164e-5e00-4289-8d95-21b630178d0c/DESJ034001.6-303451.8_g_20150124Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_646d164e-5e00-4289-8d95-21b630178d0c/DESJ034001.6-303451.8_g_20150124Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_646d164e-5e00-4289-8d95-21b630178d0c/DESJ034001.6-303451.8_g_20150120Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_646d164e-5e00-4289-8d95-21b630178d0c/DESJ034001.6-303451.8_g_20150120Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_646d164e-5e00-4289-8d95-21b630178d0c/DESJ034001.6-303451.8_g_20140130Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_646d164e-5e00-4289-8d95-21b630178d0c/DESJ034001.6-303451.8_g_20140130Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_646d164e-5e00-4289-8d95-21b630178d0c/DESJ034001.6-303451.8_g_20160103Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_646d164e-5e00-4289-8d95-21b630178d0c/DESJ034001.6-303451.8_g_20160103Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td>			<td> <a href = "/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_646d164e-5e00-4289-8d95-21b630178d0c/DESJ034001.6-303451.8_g_20160115Circ.png"><img src="/Users/lynuszullo/pyOrbfit/Permfiles/NotTempImgs_temp_646d164e-5e00-4289-8d95-21b630178d0c/DESJ034001.6-303451.8_g_20160115Circ.png" align='center' alt = "Example 1 pic"
+                width ="200" height="200" align="center" border = "1"></img></a> </td></tr>     <tr align = "center"><td>Expnum = 403065, ccd = 40</td><td>Expnum = 402670, ccd = 60</td><td>Expnum = 401208, ccd = 31</td><td>Expnum = 279802, ccd = 59</td><td>Expnum = 508374, ccd = 3</td><td>Expnum = 511786, ccd = 3</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2015/1/26 03:27:11</td><td> Date: 2015/01/25 03:16:41</td><td> Date: 2015/01/21 03:40:11</td><td> Date: 2014/01/31 01:57:39</td><td> Date: 2016/01/04 03:59:34</td><td> Date: 2016/01/16 04:02:50</td></tr> 
+<tr align ="center"><tr><td><p></p></td></tr><td> <u>t_eff = 0.736</u></td></tr>		<tr align = "center" valign="top">			 <td><a href = "/Users/lynuszullo/pyOrbfit/" ><img src= "/Users/lynuszullo/pyOrbfit/" align='center' alt = "No Reference Image Available"
+                width ="200" height="200" align="center" border = "1"></img> </a> </td></tr>     <tr align = "center"><td>Expnum = 403066, ccd = 40</td></tr> <tr align = "center" border-bottom="1px"><td> Date: 2015/1/26 03:29:07</td></tr> 
 
     
     </table>
@@ -402,14 +378,28 @@
     
     </table>
 
-    </div><div>
-    <form action="gold_27.html" method="post">
-        <p>Comment:</p>
-        <textarea type="text" name="name"> </textarea> <br>
-    
-        <input type="submit">
-    </form>
     </div>
+<?php
+
+if($_POST){
+    $name = $_POST['name'];
+    $content = $_POST['commentContent'];
+    $file = 'distant_s13_y2.php';
+    if (($handle = fopen($file, "a")) !== false) { 
+        fwrite($handle,"<b>" . $name . "</b>:<br/>" . $content . "<br/>");
+        fclose($handle);
+    }
+}
+
+?>
+
+
+<form action = "" method = "POST">
+    Comments: <textarea rows = "10" cols = "30" name = "commentContent"></textarea><br/>
+    Name: <input type = "text" name = "name"><br/>
+    <input type = "submit" value = "Post!"><br/>
+</form>
+
     
     </body>
 
